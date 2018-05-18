@@ -1,4 +1,3 @@
-FROM nginx:latest
+FROM php:7.0-apache
 
-ADD ./myvhost.conf /etc/nginx/sites-enabled/000-default.conf
-
+ADD ./app/ /var/www/html/
