@@ -12,6 +12,11 @@ Persistente Daten:
 
 Docker compose:
  - 02
+ 
 Mehrere Services
+ - docker volume create mysql
  - 03
 
+Docker Swarm:
+ - docker network create mynet --driver=overlay
+ - 04

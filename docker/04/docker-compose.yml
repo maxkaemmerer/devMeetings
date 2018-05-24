@@ -2,7 +2,6 @@ version: "3.6"
 services:
   mysql:
     image: mysql:5.7
-    container_name: mysql
     ports:
      - "3306:3306"
     environment:
@@ -13,16 +12,15 @@ services:
      - mynet
   webserver:
     image: webserver
-    build: .
-    container_name: webserver
     ports:
      - "80:80"
-    volumes:
-     - ./app:/var/www/html
     networks:
      - mynet
+    deploy:
+     replicas: 3
 volumes:
   mysql:
     external: true
 networks:
   mynet:
+    external: true
