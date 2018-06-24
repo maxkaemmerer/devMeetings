@@ -8,8 +8,10 @@ services:
      - mysql:/var/lib/mysql
     networks:
      - mynet
+    ports:
+     - "3306:3306"
   webserver:
-    image: webserver
+    image: maxkaemmerer/webserver
     ports:
      - "80:80"
     networks:

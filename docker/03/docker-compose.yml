@@ -9,6 +9,8 @@ services:
      - mysql:/var/lib/mysql
     networks:
      - mynet
+    ports:
+     - "3306:3306"
   webserver:
     image: webserver
     build: .
