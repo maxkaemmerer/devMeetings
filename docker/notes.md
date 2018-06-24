@@ -24,5 +24,6 @@ Docker Swarm:
  - docker swarm init --advertise-addr ...
 
 Docker Stack:
- - docker network create mynet --driver=overlay
  - 04
+ - docker network create mynet --driver=overlay
+ - replicas

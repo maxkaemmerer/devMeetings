@@ -17,7 +17,7 @@ services:
     networks:
      - mynet
     deploy:
-     replicas: 3
+     replicas: 1
 volumes:
   mysql:
     external: true
