@@ -10,6 +10,9 @@ services:
      - mynet
     ports:
      - "3306:3306"
+    deploy:
+     placement:
+      constraints: [node.role == manager]
   webserver:
     image: maxkaemmerer/webserver
     ports:
@@ -17,10 +20,12 @@ services:
     networks:
      - mynet
     deploy:
-     replicas: 3
+     replicas: 1
 volumes:
   mysql:
     external: true
 networks:
   mynet:
     external: true
+    driver: overlay
+    attachable: true
