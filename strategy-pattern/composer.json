@@ -1,0 +1,19 @@
+{
+    "name": "maxkaemmerer/strategy-pattern",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Max Kämmerer",
+            "email": "maxkaemmerer.hb@gmail.com"
+        }
+    ],
+    "require": {
+        "maxkaemmerer/console": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MaxKaemmerer\\DevMeetings\\StrategyPattern\\": "src"
+        }
+    }
+}
