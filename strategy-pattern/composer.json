@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "maxkaemmerer/console": "^0.1.0"
+        "maxkaemmerer/console": "^0.1.0",
+        "ext-gd": "*"
     },
     "autoload": {
         "psr-4": {
