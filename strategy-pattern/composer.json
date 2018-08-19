@@ -9,12 +9,12 @@
         }
     ],
     "require": {
-        "maxkaemmerer/console": "^0.1.0",
-        "ext-gd": "*"
+        "maxkaemmerer/console": "^0.1.0"
     },
     "autoload": {
         "psr-4": {
             "MaxKaemmerer\\DevMeetings\\StrategyPattern\\": "src"
         }
-    }
+    },
+    "description": ""
 }

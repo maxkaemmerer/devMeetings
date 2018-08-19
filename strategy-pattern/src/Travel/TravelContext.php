@@ -4,43 +4,36 @@ declare(strict_types=1);
 
 namespace MaxKaemmerer\DevMeetings\StrategyPattern\Travel;
 
-
 final class TravelContext
 {
     /**
-     * @var TravelStrategy[]
+     * @var Travel[]
      */
-    private $travelStrategies;
+    private $kindsOfTravel;
 
     /**
      * TravelContext constructor.
-     * @param array $travelStrategies
+     * @param array $kindsOfTravel
      */
-    public function __construct(array $travelStrategies)
+    public function __construct(array $kindsOfTravel)
     {
-        foreach ($travelStrategies as $strategy) {
-            if ($strategy instanceof TravelStrategy) {
-                $this->travelStrategies[$strategy->type()] = $strategy;
+        foreach ($kindsOfTravel as $strategy) {
+            if ($strategy instanceof Travel) {
+                $this->kindsOfTravel[$strategy->type()] = $strategy;
             }
         }
     }
 
     public function travel(string $preference): void
     {
-        if (!array_key_exists($preference, $this->travelStrategies)) {
+        if (!array_key_exists($preference, $this->kindsOfTravel)) {
             throw new \InvalidArgumentException(sprintf('"%s" is not a supported form of travel', $preference));
         }
 
-        $travelStrategy = $this->travelStrategies[$preference];
-        if ($travelStrategy instanceof RequiresPayment) {
-            $travelStrategy->pay();
-        }
-        if ($travelStrategy instanceof RequiresFuel) {
-            $travelStrategy->refuel();
-        }
-        if ($travelStrategy instanceof Independent){
-            $travelStrategy->changePlans();
-        }
-        $travelStrategy->travel();
+        $travelKind = $this->kindsOfTravel[$preference];
+        $travelKind->name();
+        $travelKind->pay();
+        $travelKind->refuel();
+        $travelKind->travel();
     }
 }
