@@ -19,6 +19,23 @@ abstract class Travel
     /** @var RefuelingBehaviour */
     protected $refuelingBehaviour;
 
+    /**
+     * Travel constructor.
+     * @param PaymentBehaviour $paymentBehaviour
+     * @param TravelBehaviour $travelBehaviour
+     * @param RefuelingBehaviour $refuelingBehaviour
+     */
+    public function __construct(
+        PaymentBehaviour $paymentBehaviour,
+        TravelBehaviour $travelBehaviour,
+        RefuelingBehaviour $refuelingBehaviour
+    ) {
+        $this->paymentBehaviour = $paymentBehaviour;
+        $this->travelBehaviour = $travelBehaviour;
+        $this->refuelingBehaviour = $refuelingBehaviour;
+    }
+
+
     abstract public function type(): string;
 
     public function pay(): void
