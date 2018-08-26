@@ -1,5 +1,7 @@
 {
     "name": "maxkaemmerer/strategy-pattern",
+    "description": "Provides Interfaces and Implementations for Command, CommandHandler, CommandBus communication",
+    "keywords": ["library", "composer", "package", "php", "command", "handler", "bus"],
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -9,12 +11,17 @@
         }
     ],
     "require": {
-        "maxkaemmerer/console": "^0.1.0"
+        "maxkaemmerer/console": "^0.1.0",
+        "phpunit/phpunit": "^7.3"
     },
     "autoload": {
         "psr-4": {
             "MaxKaemmerer\\DevMeetings\\StrategyPattern\\": "src"
         }
     },
-    "description": ""
+    "autoload-dev": {
+        "psr-4": {
+            "MaxKaemmerer\\DevMeetings\\StrategyPattern\\Tests\\": "tests"
+        }
+    }
 }

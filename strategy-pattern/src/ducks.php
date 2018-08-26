@@ -19,14 +19,14 @@ $ducks = [
  */
 foreach ($ducks as $duck){
     echo $duck->name() . ' flies: ';
-    $duck->fly();
+    echo $duck->fly();
     echo PHP_EOL;
 
     echo $duck->name() . ' swims: ';
-    $duck->swim();
+    echo $duck->swim();
     echo PHP_EOL;
 
     echo $duck->name() . ' quacks: ';
-    $duck->quack();
+    echo $duck->quack();
     echo PHP_EOL;
 }

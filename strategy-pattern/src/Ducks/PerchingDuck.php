@@ -8,14 +8,14 @@ namespace MaxKaemmerer\DevMeetings\StrategyPattern\Ducks;
 final class PerchingDuck extends Duck
 {
 
-    public function fly(): void
+    public function fly(): string
     {
-        echo 'Flying quickly!';
+        return 'Flying quickly!';
     }
 
-    public function quack(): void
+    public function quack(): string
     {
-        echo 'Quack, QUACK!';
+        return 'Quack, QUACK!';
     }
 
     public function name(): string
@@ -23,8 +23,8 @@ final class PerchingDuck extends Duck
         return 'Perching Duck';
     }
 
-    public function swim(): void
+    public function swim(): string
     {
-        echo 'Swimming!';
+        return 'Swimming!';
     }
 }

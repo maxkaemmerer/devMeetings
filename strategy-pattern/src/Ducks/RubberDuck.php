@@ -8,17 +8,14 @@ namespace MaxKaemmerer\DevMeetings\StrategyPattern\Ducks;
 final class RubberDuck extends Duck
 {
 
-    /**
-     * @throws \Exception
-     */
-    public function fly(): void
+    public function fly(): string
     {
-        throw new \Exception(sprintf('%s\'s can\'t fly..!', $this->name()));
+        return 'Please don\'t throw me!';
     }
 
-    public function quack(): void
+    public function quack(): string
     {
-        echo 'Squeek!';
+        return 'Squeek!';
     }
 
     public function name(): string
@@ -26,8 +23,8 @@ final class RubberDuck extends Duck
         return 'Rubber Duck';
     }
 
-    public function swim(): void
+    public function swim(): string
     {
-        echo 'Swimming!';
+        return 'Swimming!';
     }
 }

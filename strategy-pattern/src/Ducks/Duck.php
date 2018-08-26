@@ -9,9 +9,9 @@ abstract class Duck
 {
     abstract public function name(): string;
 
-    abstract public function fly(): void;
+    abstract public function fly(): string;
 
-    abstract public function swim(): void;
+    abstract public function swim(): string;
 
-    abstract public function quack(): void;
+    abstract public function quack(): string;
 }
